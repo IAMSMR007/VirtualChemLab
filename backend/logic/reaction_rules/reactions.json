@@ -1,0 +1,10 @@
+{
+  "salt_A": {
+    "HCl": {"result": "white precipitate", "evidence": "Cl- suggested"},
+    "AgNO3": {"result": "no visible change", "evidence": ""}
+  },
+  "salt_B": {
+    "AgNO3": {"result": "yellow precipitate", "evidence": "Ag+ likely"},
+    "NaOH": {"result": "blue solution", "evidence": "Cu2+ maybe"}
+  }
+}
