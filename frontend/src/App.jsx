@@ -1,23 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-export default function App() {
-  const [reagents, setReagents] = useState([]);
+import AuthPage from './Features/Auth/AuthPage';
+import HeroPage from './Features/Hero/HeroPage';
+import LabPage from './Features/LabInterface/LabInterfacePage';
 
-  useEffect(() => {
-    // quick test to ensure the app mounts and can call backend
-    fetch("/api/reagents").then(r => r.json()).then(setReagents).catch(()=> {
-      setReagents(["HCl","NaOH","AgNO3"]);
-    });
-  }, []);
-
+function App() {
   return (
-    <div style={{padding:20}}>
-      <h1>VirtualChemLab — Frontend Live</h1>
-      <h3>Reagents</h3>
-      <ul>
-        {reagents.map((r, i) => <li key={i}>{r}</li>)}
-      </ul>
-      <p>If you see this, React mounted successfully.</p>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HeroPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/lab" element={<LabPage />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;

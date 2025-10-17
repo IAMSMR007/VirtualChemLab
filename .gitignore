@@ -1,6 +1,6 @@
 # dependencies
 /node_modules/
-
+frontentend/node_modules/
 # testing
 /coverage/
 
