@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+
+:root {
+      --primary-color: #007bff;
+      --font-stack: "Helvetica Neue", Arial, sans-serif; 
+      --spacing-unit: 16px; 
+    }
+body  {
+    background-color: black;
+    color: white;
+}
